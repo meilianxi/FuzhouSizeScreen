@@ -87,7 +87,7 @@
 </template>
 <script>
   import Move from "../Aimation/Aimation.vue";
-  import HotMap from "./HotMap.vue";
+  import HotMap from "./Fly2HotMap.vue";
   import Vue from 'vue';
   import {PovinceMap} from "../../api";
 
@@ -98,10 +98,10 @@
         myIndex: 0,
         timer1: null,
         timer2: null,
-        /* 地图的经纬度和级数119.17079,26.129957*/
-
-        longitude: 119.17079,
-        latitude: 26.129957,
+        /* 地图的经纬度和级数118.173761,26.6486*/
+        /* 地图的经纬度和级数118.463518,26.516262*/
+        longitude: 118.463518,
+        latitude: 26.516262,
         mapScale: 9,
       }
     },
@@ -219,7 +219,7 @@
   /*移动地点*/
   .move1 {
     left: 37%;
-    top: 50%;
+    top: 40%;
   }
 
   .move2 {
@@ -228,7 +228,7 @@
   }
 
   .move3 {
-    left: 65%;
+    left: 45%;
     top: 20%;
   }
   .move4 {
@@ -236,12 +236,12 @@
     top: 60%;
   }
   .move5 {
-    left: 20%;
-    top: 20%;
+    left: 75%;
+    top: 32%;
   }
   .move6 {
-    left: 67%;
-    top: 75%;
+    left: 70%;
+    top: 65%;
   }
 
   .my-position {
@@ -258,6 +258,7 @@
     }
   }
   .my-position-task {
+    display: none;
     position: absolute;
     left: 16%;
     top: 10%;

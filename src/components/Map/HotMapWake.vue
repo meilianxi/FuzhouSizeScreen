@@ -186,21 +186,8 @@
                 "color": "#003979ff"
               }
             },
-            {
-              "featureType": "scenicspotslabel",
-              "elementType": "labels.icon",
-              "stylers": {
-                "color": "#00ffffff",
-                "hue": "#d0e0e3"
-              }
-            },
-            {
-              "featureType": "water",
-              "elementType": "all",
-              "stylers": {
-                "color": "#004692ff"
-              }
-            },
+
+
             {
               "featureType": "green",
               "elementType": "all",
@@ -208,13 +195,7 @@
                 "color": "#004292ff"
               }
             },
-            {
-              "featureType": "highway",
-              "elementType": "all",
-              "stylers": {
-                "color": "#4fdb75ff"
-              }
-            },
+
             {
               "featureType": "local",
               "elementType": "all",
@@ -236,9 +217,7 @@
               "stylers": {
                 "color": "#004292ff"
               }
-            }
-
-
+            },
 
           ]
         });

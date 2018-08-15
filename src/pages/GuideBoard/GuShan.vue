@@ -114,7 +114,7 @@
         this.tempData =  personData;
       },
       lun() {
-        this.timer=setInterval(this.getNumber, 3000);
+        this.timer=setInterval(this.getNumber, 1000);
       }
     },
     computed: {

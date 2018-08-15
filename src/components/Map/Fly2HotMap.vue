@@ -21,8 +21,10 @@
         const {longitude, latitude, mapScale} = this;
         let point = new BMap.Point(longitude,latitude);
         map.centerAndZoom(point, mapScale);
-        let marker = new BMap.Marker(point);
-        map.addOverlay(marker);
+
+       /* let marker = new BMap.Marker(point);
+        map.addOverlay(marker);*/
+
         map.disableDragging();/*禁止用户拖拽*/
         map.disableDoubleClickZoom();/*禁止双击放大*/
         map.setMapStyle({

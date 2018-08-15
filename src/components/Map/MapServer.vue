@@ -107,11 +107,10 @@
         myIndex: 0,
         timer1: null,
         timer2: null,
-        //地图的经纬度和级数 119.675763,25.935716
-        //地图的经纬度和级数 119.66764,25.938352
-        longitude: 119.675763,
-        latitude: 25.935716,
-        mapScale: 14,
+        //地图的经纬度和级数 119.310944,26.089515
+        longitude: 119.310944,
+        latitude: 26.089515,
+        mapScale: 13,
         /*景点数据*/
         spotsData: []
       }
@@ -191,6 +190,8 @@
   .my-map {
     height: 100%;
     position: relative;
+    /* background: url("../../../static/map.jpg") no-repeat;
+     background-size: 99.5% 100%;*/
   }
 
   .tour-fly {
@@ -235,12 +236,12 @@
   /*移动地点*/
   .move1 {
     left: 60%;
-    top: 65%;
+    top: 60%;
   }
 
   .move2 {
-    left: 8%;
-    top: 70%;
+    left: 10%;
+    top: 60%;
   }
 
   .move3 {
@@ -248,12 +249,12 @@
     top: 20%;
   }
   .move4 {
-    left: 40%;
-    top: 4%;
+    left: 35%;
+    top: 22%;
   }
   .move5 {
     left: 20%;
-    top: 45%;
+    top: 60%;
   }
   .move6 {
     left: 30px;

@@ -9,6 +9,7 @@ const sourceMapEnabled = isProduction
 module.exports = {
   loaders: utils.cssLoaders({
     sourceMap: sourceMapEnabled,
+    /*extract: isProduction 原来的配置,但是打包后闪动的特效失效,改如下解决了*/
     extract: false
   }),
   cssSourceMap: sourceMapEnabled,

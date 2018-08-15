@@ -14,18 +14,18 @@
           </div>
           <div class="tour-right">
             <div class="right-number clearfix">
+              <span>{{myNumber[0]}}</span>
+              <span>{{myNumber[1]}}</span>
               <span>{{myNumber[2]}}</span>
+              <i>，</i>
               <span>{{myNumber[3]}}</span>
               <span>{{myNumber[4]}}</span>
-              <i>，</i>
               <span>{{myNumber[5]}}</span>
-              <span>{{myNumber[6]}}</span>
-              <span>{{myNumber[7]}}</span>
               <i style="color:#FFFFBA;">人</i>
 
               <div class="today-number">
                 <h4>今日到港:</h4>
-                <b>123456</b>
+                <b>{{parseInt(myNumber)}}</b>
               </div>
               <div class="today-number">
                 <h4>本月到港:</h4>
@@ -81,8 +81,9 @@
     data() {
       return {
         tempData:[],
-        myNumber:"00000000",
+        myNumber:"012044", //实时人数
         wake: true,
+        timer1: null,
         flyFood: [],
         flyHotel: [],
         swiperOption: {
@@ -95,12 +96,28 @@
         }
       }
     },
-    created() {
-    },
     mounted() {
-
+      this.changeNumber();
     },
     methods: {
+      /*模拟到港人数 m~n的随机数*/
+      roundNumber(m, n) {
+        return Math.round( Math.random()*(n-m) + m)
+      },
+      computedNumber() {
+        this.myNumber=parseInt(this.myNumber)
+          + this.roundNumber(10,25) +'';
+        if(this.myNumber.length===5) {
+          this.myNumber = "0"+this.myNumber;
+        }
+        if(this.myNumber.length===4) {
+          this.myNumber = "00"+this.myNumber;
+        }
+
+      },
+      changeNumber() {
+        this.timer1 = setInterval(this.computedNumber, 3000);
+      }
     },
     components: {
       Header,
@@ -110,6 +127,9 @@
       Oblaten1,
       Ho
     },
+    beforeDestroy() {
+      clearInterval(this.timer1);
+    }
   }
 </script>
 

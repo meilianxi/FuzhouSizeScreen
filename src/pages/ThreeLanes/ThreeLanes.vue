@@ -25,27 +25,35 @@
         </p>
       </div>
       <div class="west-location">
-        <div style="position: relative; top: -300px;left:580px;font-size: 10px;
+        <div style="position: relative;
+        top: -300px;
+        left: 400px;font-size: 10px;
 					 background-color: black; width: 136px;height:32px; line-height:16px;
 					 color: white;overflow: hidden; opacity: 0.8;">
-          <p>您现在所在的位置<br/>南山路南端与苏堤交叉处</p>
+          <p>您现在所在的位置<br/>三坊七巷景区入口处</p>
         </div>
 
-        <div style="position: relative; top: -538px;left:500px;font-size: 10px;
+        <div style="position: relative;
+        top: -588px;
+        left: 490px;
+        font-size: 10px;
 					 width: 120px;height:32px; line-height:16px;color: #0152B2;overflow: hidden;
 					" v-if="pass"
              :class= "{ 'reds': pass[0].type ===0,
               'greens': pass[0].type ===1,
               'yellows': pass[0].type ===2} ">
-          <p>华港公园内<br/>距您500米 步行6min</p>
+          <p>天后宫<br/>距您1500米 步行30min</p>
         </div>
-        <div style="position: relative; top: -508px;left:500px;font-size: 10px;
+        <div style="position: relative;
+         top: -308px;
+         left: 330px;
+         font-size: 10px;
 					 width: 120px;height:32px; line-height:16px;color: #0152B2;overflow: hidden;
 					" v-if="pass"
              :class= "{ 'reds': pass[1].type ===0,
                'greens': pass[1].type ===1,
                'yellows': pass[1].type ===2} ">
-          <p>太子湾内<br/>距您200米 步行2min</p>
+          <p>林则徐故居<br/>距您200米 步行2min</p>
         </div>
         <div style="position: relative; top: -500px;left:500px;font-size: 10px;
 					 width: 120px;height:32px; line-height:16px;color: #0152B2;overflow: hidden;
@@ -61,7 +69,7 @@
              :class= "{ 'reds': pass[2].type ===0,
            'greens': pass[2].type ===1,
            'yellows': pass[2].type ===2} ">
-          <p>汉庭酒店(杭州虎跑路店)<br/>参考价:￥223</p>
+          <p>汉庭酒店<br/>参考价:￥223</p>
         </div>
 
       </div>

@@ -24,7 +24,7 @@
               <i>人</i>
               <div class="today-number">
                 <h4>今日到港:</h4>
-                <b>123456</b>
+                <b>{{parseInt(myNumber)}}</b>
               </div>
               <div class="today-number">
                 <h4>本月到港:</h4>
@@ -217,8 +217,9 @@
     data() {
       return {
         tempData:[],
-        myNumber:"052044",
+        myNumber:"012044",
         timer: null,
+        timer1: null,
         ProvinceHotCity:[],
         ProvinceHotScen: [],
         ProvinceGift: [],
@@ -240,6 +241,7 @@
     mounted() {
       this.getAll();
       setTimeout(()=>{this.loading = false},7000);
+      this.changeNumber();
     },
     methods: {
       /*获取本页面所有数据*/
@@ -249,6 +251,24 @@
         this.ProvinceHotCity = ProvinceHotCity;
         this.ProvinceHotScen = ProvinceHotScen;
         this.ProvinceGift = ProvinceGift;
+      },
+      /*模拟到港人数 m~n的随机数*/
+      roundNumber(m, n) {
+        return Math.round( Math.random()*(n-m) + m)
+      },
+      computedNumber() {
+        this.myNumber=parseInt(this.myNumber)
+          + this.roundNumber(10,25) +'';
+        if(this.myNumber.length===5) {
+          this.myNumber = "0"+this.myNumber;
+        }
+        if(this.myNumber.length===4) {
+          this.myNumber = "00"+this.myNumber;
+        }
+
+      },
+      changeNumber() {
+        this.timer1 = setInterval(this.computedNumber, 3000);
       }
     },
     components: {
@@ -267,6 +287,7 @@
     },
     beforeDestroy() {
       clearInterval(this.timer);
+      clearInterval(this.timer1);
     }
   }
 </script>

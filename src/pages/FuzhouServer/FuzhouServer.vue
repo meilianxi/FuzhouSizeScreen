@@ -1,11 +1,11 @@
 <template>
   <div class="fly">
-    <Header title="长乐机场旅游服务信息大屏"></Header>
+    <Header title="福州市游客服务信息大屏"></Header>
     <div class="main clearfix">
       <div class="fly-left">
         <div class="tour clearfix">
           <div class="tour-left">
-            <h3 class="tour-number">今日到港客流量</h3>
+            <h3 class="tour-number">福州市实时游客量</h3>
             <div class="tour-yesterday">
               <span>昨日游客总量</span>
               <br>
@@ -24,7 +24,7 @@
               <i>人</i>
               <div class="today-number">
                 <h4>今日到港:</h4>
-                <b>123456</b>
+                <b>{{parseInt(myNumber)}}</b>
               </div>
               <div class="today-number">
                 <h4>本月到港:</h4>
@@ -71,7 +71,7 @@
               <div class="my-hot">
                 <Hot>
                   <template slot="title">
-                    周边美食排行榜---三坊七巷景区
+                    周边美食排行榜
                   </template>
                   <template >
                     <tr>
@@ -95,7 +95,7 @@
               <div class="my-hot">
                 <Hot>
                   <template slot="title">
-                    酒店口碑排行榜---三坊七巷景区
+                    酒店口碑排行榜
                   </template>
                   <template >
                     <tr>
@@ -122,7 +122,7 @@
               <div class="my-hot">
                 <Hot>
                   <template slot="title">
-                    周边美食排行榜---青云山景区
+                    周边美食排行榜
                   </template>
                   <template >
                     <tr>
@@ -146,7 +146,7 @@
               <div class="my-hot">
                 <Hot>
                   <template slot="title">
-                    酒店口碑排行榜---青云山景区
+                    酒店口碑排行榜
                   </template>
                   <template >
                     <tr>
@@ -173,7 +173,7 @@
               <div class="my-hot">
                 <Hot>
                   <template slot="title">
-                    周边美食排行榜---石竹山景区
+                    周边美食排行榜
                   </template>
                   <template >
                     <tr>
@@ -197,7 +197,7 @@
               <div class="my-hot">
                 <Hot>
                   <template slot="title">
-                    酒店口碑排行榜---石竹山景区
+                    酒店口碑排行榜
                   </template>
                   <template >
                     <tr>
@@ -224,7 +224,7 @@
               <div class="my-hot">
                 <Hot>
                   <template slot="title">
-                    周边美食排行榜---鼓山景区
+                    周边美食排行榜
                   </template>
                   <template >
                     <tr>
@@ -248,7 +248,7 @@
               <div class="my-hot">
                 <Hot>
                   <template slot="title">
-                    酒店口碑排行榜---鼓山景区
+                    酒店口碑排行榜
                   </template>
                   <template >
                     <tr>
@@ -275,7 +275,7 @@
               <div class="my-hot">
                 <Hot>
                   <template slot="title">
-                    周边美食排行榜---云顶景区
+                    周边美食排行榜
                   </template>
                   <template >
                     <tr>
@@ -299,7 +299,7 @@
               <div class="my-hot">
                 <Hot>
                   <template slot="title">
-                    酒店口碑排行榜---云顶景区
+                    酒店口碑排行榜
                   </template>
                   <template >
                     <tr>
@@ -326,7 +326,7 @@
               <div class="my-hot">
                 <Hot>
                   <template slot="title">
-                    周边美食排行榜---船政文化景区
+                    周边美食排行榜
                   </template>
                   <template >
                     <tr>
@@ -350,7 +350,7 @@
               <div class="my-hot">
                 <Hot>
                   <template slot="title">
-                    酒店口碑排行榜---船政文化景区
+                    酒店口碑排行榜
                   </template>
                   <template >
                     <tr>
@@ -382,14 +382,15 @@
 <script>
   import Hot from "../../components/Hot/Hot.vue";
   import Header from "../../components/Base/Header/Header.vue";
-  import Map from "../../components/Map/Map.vue";
+  import Map from "../../components/Map/MapServer.vue";
   import {fly1DataAll} from "../../api";
   export default {
     data() {
       return {
         tempData:[],
-        myNumber:"052044", //实时人数
+        myNumber:"012044", //实时人数
         timer: null,
+        timer1: null,
         loading: false,
         flySpots:[],
         flyFood: [],
@@ -407,6 +408,7 @@
 
     mounted() {
       this.getAll();
+      this.changeNumber();
     },
     methods: {
 //         获取本页面所有数据
@@ -417,6 +419,24 @@
         this.flySpots = flySpots;
         this.flyFood= flyFood;
         this.flyHotel = flyHotel;
+      },
+      /*模拟到港人数 m~n的随机数*/
+      roundNumber(m, n) {
+        return Math.round( Math.random()*(n-m) + m)
+      },
+      computedNumber() {
+        this.myNumber=parseInt(this.myNumber)
+          + this.roundNumber(10,25) +'';
+        if(this.myNumber.length===5) {
+          this.myNumber = "0"+this.myNumber;
+        }
+        if(this.myNumber.length===4) {
+          this.myNumber = "00"+this.myNumber;
+        }
+
+      },
+      changeNumber() {
+        this.timer1 = setInterval(this.computedNumber, 3000);
       }
     },
     components: {
@@ -427,6 +447,7 @@
     beforeDestroy() {
       /*记得清页面定时器*/
       clearInterval(this.timer);
+      clearInterval(this.timer1);
     }
   }
 </script>
