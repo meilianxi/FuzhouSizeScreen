@@ -2,6 +2,13 @@
   <div id="westlake">
     <Header title="三坊七巷景区旅游服务信息大屏"></Header>
     <div class="west-left">
+      <!--图标-->
+      <div class="icon1 my-icon"></div>
+      <div class="icon2 my-icon"></div>
+      <div class="icon3 my-icon"></div>
+      <div class="icon4 my-icon"></div>
+      <div class="icon5 my-icon"></div>
+      <div class="icon6 my-icon"></div>
       <HotMap
         :longitude ="longitude"
         :latitude="latitude"
@@ -205,6 +212,40 @@
     float: left;
     position: relative;
   }
+  /*图标*/
+  .my-icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 99;
+  }
+  .icon1 {
+    left: 30%;
+    top: 50%;
+    background: url("../../../static/images/ThreeLanes/1.png") no-repeat;}
+  .icon2 {
+    left: 40%;
+    top: 50%;
+    background: url("../../../static/images/ThreeLanes/1.png") no-repeat;}
+  .icon3 {
+    left: 40%;
+    top: 40%;
+    background: url("../../../static/images/ThreeLanes/2.png") no-repeat;}
+  .icon4 {
+    left: 50%;
+    top: 40%;
+    background: url("../../../static/images/ThreeLanes/2.png") no-repeat;}
+
+  .icon5 {
+    left: 50%;
+    top: 60%;
+    background: url("../../../static/images/ThreeLanes/3.png") no-repeat;}
+  .icon6 {
+    left: 50%;
+    top: 70%;
+    background: url("../../../static/images/ThreeLanes/3.png") no-repeat;}
+
+
   .west-right{
     width: 17%;
     height: 85%;
