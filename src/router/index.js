@@ -21,6 +21,10 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect: "/an"
+    },
+    {
+      path: '/an',
       name: 'FuzhouGuiAn',
       component: FuzhouGuiAn
     },
