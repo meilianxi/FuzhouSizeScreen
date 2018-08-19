@@ -41,6 +41,19 @@
       <div class="fly-right">
         <div class="fly-right-top">
           <h3>今日收入总览</h3>
+          <div class="add">
+              <p>目前累计收入</p>
+              <p> <span>758</span> <i>万元</i></p>
+              <p>同比昨日</p>
+              <p> <span class="my-add">+</span> <span>2%</span> </p>
+          </div>
+          <div class="done">
+            <p class="done-title">目标完成率</p>
+            <div class="done-bottom">
+              <p><span class="done-bg1"></span> 未完成</p>
+              <p><span class="done-bg2"></span> 已完成</p>
+            </div>
+          </div>
           <div class="money">
             <Ruan1></Ruan1>
           </div>
@@ -69,7 +82,11 @@
           </Hot>
         </div>
         <div class="fly-right-bottom">
+          <h3>近半年收入情况</h3>
 
+          <div class="zui">
+             <Zui></Zui>
+          </div>
         </div>
       </div>
     </div>
@@ -80,6 +97,7 @@
   import Header from "../../components/Base/Header/Header.vue";
   import Map from "../../components/Map/FoodMap.vue";
   import Ruan1 from "../../components/Echarts/Hotel/Ruan1.vue";
+  import Zui from "../../components/Echarts/Hotel/ZuiZhuZhe.vue";
   import {ZuiDeYiCount} from "../../api";
   export default {
     data() {
@@ -135,7 +153,8 @@
       Header,
       Hot,
       Map,
-      Ruan1
+      Ruan1,
+      Zui
     },
     beforeDestroy() {
       /*记得清页面定时器*/
@@ -167,7 +186,6 @@
     flex-direction: column;
     .fly-right-top {
       flex: 3;
-      background: #666;
       position: relative;
       h3 {
         width: 80%;
@@ -185,16 +203,85 @@
         left: 30%;
         top: 10%;
       }
+      .add  {
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        p {
+          color: #fff;
+          margin-top: 5px;
+          margin-left: 10px;
+          &:nth-child(1) {
+            margin-top: 10px;
+          }
+          span {
+            color: #dea90f;
+            font-size: 30px;
+            &.my-add {
+              color: #2cc4c5;
+            }
+          }
+          i {
+            color: yellow;
+            font-size: 16px;
+          }
+        }
+      }
+      .done {
+        position: absolute;
+        left: 35%;
+        width: 30%;
+        height: 80%;
+        color: #fff;
+        .done-title {
+          margin-top: 10px;
+          text-align: center;
+        }
+        .done-bottom {
+          position: absolute;
+          width: 100%;
+          bottom: 22%;
+          p {
+            text-align: center;
+            font-size: 12px;
+            span {
+              display: inline-block;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              &.done-bg1 {
+                background: #2bc3c4;
+              }
+              &.done-bg2 {
+                background: #ffc000;
+              }
+            }
+          }
+        }
+      }
 
     }
     .fly-right-center {
       flex: 2;
-      background: #ccc;
-
     }
     .fly-right-bottom {
       flex: 3;
-      background: #eee;
+      position: relative;
+      h3 {
+        width: 80%;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #16A2BF;
+        margin: 1% 10%;
+        color: #16A2BF;
+      }
+      .zui {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+
     }
   }
   .fly-left {

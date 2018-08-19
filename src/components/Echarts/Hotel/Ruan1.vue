@@ -34,7 +34,7 @@
               },
               hoverAnimation: false,
               data: [{
-                value: 80,
+                value: 75,
                 name: '任务进度',
                 itemStyle: {
                   normal: {
@@ -46,13 +46,13 @@
                     formatter: '{d}%',
                     textStyle: {
                       color: '#15ce56',
-                      fontSize: 38,
+                      fontSize: 30,
                       fontWeight: 'bold'
                     }
                   }
                 },
               }, {
-                value: 20,
+                value: 25,
 
                 label: {
                   normal: {
@@ -73,7 +73,7 @@
                       y2: 1,
                       colorStops: [{
                         offset: 0,
-                        color: '#40d738' // 0% 处的颜色
+                        color: '#2235d4' // 0% 处的颜色
                       }, {
                         offset: 1,
                         color: '#2235d4' // 100% 处的颜色

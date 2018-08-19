@@ -10,8 +10,8 @@
             <li>
              <div @click = "isShow(0)"> 信息中心</div>
               <ul class="child-nav" v-show="one">
-                <li>大屏一</li>
-                <li>大屏一</li>
+                <router-link to="/server" tag="li">服务大屏</router-link>
+                <router-link to="/jian" tag="li">监管大屏</router-link>
               </ul>
             </li>
             <li>
@@ -21,8 +21,10 @@
                 <i>倩</i>
               </div>
               <ul class="child-nav" v-show="two">
-                <li>大屏一</li>
-                <li>大屏一</li>
+                <router-link to="/three" tag="li">三坊七巷</router-link>
+                <router-link to="/gu" tag="li">鼓山景区</router-link>
+                <router-link to="/an" tag="li">贵安欢乐</router-link>
+                <router-link to="/le" tag="li">机场小屏</router-link>
               </ul>
             </li>
             <li>
@@ -32,8 +34,9 @@
                <i>倩</i>
              </div>
               <ul class="child-nav" v-show="three">
-                <li>大屏一</li>
-                <li>大屏一</li>
+                <router-link to="/fly" tag="li">机场一</router-link>
+                <router-link to="/fly2" tag="li">机场二</router-link>
+                <router-link to="/guide1" tag="li">鼓山路牌</router-link>
               </ul>
             </li>
             <li>
@@ -43,7 +46,7 @@
                <i>倩</i>
              </div>
               <ul class="child-nav" v-show="four">
-                <li>大屏一</li>
+                <router-link to="/hotel" tag="li">宾馆一</router-link>
               </ul>
             </li>
             <li>
@@ -53,7 +56,7 @@
                 <i>倩</i>
               </div>
               <ul class="child-nav" v-show="five">
-                <li>大屏一</li>
+                <router-link to="/food" tag="li">醉得意</router-link>
               </ul>
             </li>
         </ul>
@@ -164,7 +167,6 @@ export default {
     margin-top: 1.4%;
   }
   .nav-header-center {
-    /*background: rgba(192,192,192,.2);*/
     h1 {
       color: #fff;
       font-size: 20px;
@@ -190,8 +192,9 @@ export default {
           position: absolute;
           width: 100%;
           top: 20px;
+          z-index: 9999;
           li {
-            background: none;
+           /* background: #000;*/
             line-height: 25px;
             text-align: center;
           }
