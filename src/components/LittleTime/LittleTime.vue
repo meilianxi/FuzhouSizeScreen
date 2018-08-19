@@ -54,7 +54,7 @@
         text-align: center;
         font-size: 30px;
         color: #fff;
-        margin-bottom: 4%;
+        margin-bottom: 1%;
       }
       .week {
         padding-top: 10%;

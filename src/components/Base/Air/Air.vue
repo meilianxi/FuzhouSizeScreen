@@ -38,7 +38,8 @@
 <style scoped>
   span {
     font-size: 14px;
-    margin-right: 10px;
+    margin-right: 8px;
+    color: #fff;
   }
   .last {
     display: inline-block;

@@ -12,8 +12,12 @@ import GuLou from "../pages/GuLou/GuLou.vue";
 import JianGuan from "../pages/JianGuan/JianGuan.vue";
 /*两张路牌*/
 import GuShan from "../pages/GuideBoard/GuShan.vue";
-import GuideThreeLanes from "../pages/GuideBoard/ThreeLanes.vue";
-// import Test from "../pages/Test.vue";
+
+/*餐饮*/
+import Food  from "../pages/Food/Food.vue";
+
+/*酒店*/
+import Hotel  from "../pages/Hotel/Hotel.vue";
 
 
 
@@ -34,11 +38,7 @@ export default new Router({
       component: FuzhouChangLe
     },
 
-    {/*{
-      path: '/test',
-      name: 'Test',
-      component: Test
-    },*/
+    {
       path: '/fly',
       name: 'Fly',
       component: Fly
@@ -72,6 +72,16 @@ export default new Router({
       path: '/guide1',
       name: 'GuShan',
       component: GuShan
+    },
+    {
+      path: '/food',
+      name: 'Food',
+      component: Food
+    },
+    {
+      path: '/hotel',
+      name: 'Hotel',
+      component: Hotel
     },
 
   ]

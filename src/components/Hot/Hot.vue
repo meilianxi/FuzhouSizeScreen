@@ -32,9 +32,9 @@
     position: relative;
     h3 {
       position: absolute;
-      height: 40px;
+      height: 30px;
       font-size: 18px;
-      line-height: 40px;
+      line-height: 30px;
       color: #49baf5;
       text-align: center;
       bottom: 5%;

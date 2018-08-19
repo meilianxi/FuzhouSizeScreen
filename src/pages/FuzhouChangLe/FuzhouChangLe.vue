@@ -16,6 +16,9 @@
       <!--人文景观-->
       <!--测试轮播-->
       <div class="main">
+        <div class="my-loading">
+          <Loading class="my-loading" v-if="loading"></Loading>
+        </div>
         <swiper :options="swiperOption">
           <!-- slides -->
           <swiper-slide>
@@ -49,6 +52,7 @@
 
   import LittleTime from "../../components/LittleTime/LittleTime.vue";
   import Humanity3 from "../../components/Humanity/Humanity3.vue";
+  import Loading from "../../components/Loading/Loading.vue";
 
   /*获取数据*/
    import {getChangLeHumanity, getChangLeNatural} from "../../api";
@@ -74,7 +78,8 @@
         humanity: [],
         nature: [],
         imgArr1: [],
-        imgArr2: []
+        imgArr2: [],
+        loading: true
       }
     },
     props: [''],
@@ -97,6 +102,9 @@
       async getData() {
         let humanity = await getChangLeHumanity();
         let nature = await getChangLeNatural();
+        if(humanity) {
+          this.loading = false;
+        }
 
         for(let i=0; i < humanity.length;i++) {
               this.imgArr1.push(humanity[i].scen_url);
@@ -146,7 +154,8 @@
     },
     components: {
       LittleTime,
-      Humanity3
+      Humanity3,
+      Loading
     },
     beforeDestroy() {
       clearInterval(this.timer);
@@ -234,6 +243,14 @@
     .main {
       height: 100%;
       border: 2px solid #13bad2;
+      position: relative;
+      .my-loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 99;
+        transform: translate(-50%, -50%);
+      }
     }
     .swiper-container {
       width: 100%;

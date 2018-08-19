@@ -1,6 +1,6 @@
 <template>
   <div id="westlake">
-    <Header title="三坊七巷景区旅游服务信息大屏"></Header>
+    <!--<Header title="三坊七巷景区旅游服务信息大屏"></Header>-->
     <div class="west-left">
       <!--图标-->
       <div class="icon1 my-icon"></div>
@@ -206,7 +206,7 @@
   }
   .west-left{
     width: 80%;
-    height: 85%;
+    height: 100%;
     border: 1px solid #16A2BF;
     margin-left: 2.5%;
     float: left;
@@ -248,7 +248,7 @@
 
   .west-right{
     width: 17%;
-    height: 85%;
+    height: 100%;
     float: left;
   }
   .west-p{

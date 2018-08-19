@@ -1,6 +1,6 @@
 <template>
   <div class="fly">
-    <Header title="长乐机场旅游服务信息大屏"></Header>
+    <!--<Header title="长乐机场旅游服务信息大屏"></Header>-->
     <div class="main clearfix">
       <div class="fly-left">
         <div class="tour clearfix">
@@ -366,7 +366,7 @@
     background: #003069;
   }
   .main {
-    height: 88%;
+    height: 100%;
     background: #003069;
 
   }

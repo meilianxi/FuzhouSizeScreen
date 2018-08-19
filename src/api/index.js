@@ -87,3 +87,15 @@ export let GuShanNumber = ()=> {
 export let XiHuCount = ()=> {
   return axios.get("/XiHu/Count");
 };
+
+
+//获取醉得意
+export let ZuiDeYiCount = ()=> {
+  return axios.get("/ZDY/Sal");
+};
+
+
+//获取酒店住宿
+export let FuZhouHotel = ()=> {
+  return axios.get("/FuZhou/Hotel");
+};

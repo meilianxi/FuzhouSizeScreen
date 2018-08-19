@@ -1,82 +1,103 @@
 <template>
   <div id="app">
-
-    <div class="my-nav">
-      <div class="my-nav-left"
-           @click="clickChange()"
-      :class="{'my-rotate': isShow, 'my-rotate-off': !isShow}">
-        <div class="my-nav-left-bg">
-        </div>
+    <div class="nav-header">
+      <div class="nav-header-left">
+        <Time></Time>
       </div>
-      <div class="my-nav-right">
-        <transition name="fadeIn">
-          <div class="my-nav-right-bg" v-show="isShow"></div>
-        </transition>
-        <ul class="menu" :class="{'click-menu': isShow}">
+      <div class="nav-header-center">
+        <h1>福州市旅游大数据管理指挥系统</h1>
+        <ul class="nav-header-center-nav">
             <li>
-              <router-link to="/an">
-                小屏一
-              </router-link>
+             <div @click = "isShow(0)"> 信息中心</div>
+              <ul class="child-nav" v-show="one">
+                <li>大屏一</li>
+                <li>大屏一</li>
+              </ul>
             </li>
             <li>
-              <router-link to="/le">
-                小屏二
-              </router-link>
+              <div @click = "isShow(1)">
+                <i>倩</i>
+                景区
+                <i>倩</i>
+              </div>
+              <ul class="child-nav" v-show="two">
+                <li>大屏一</li>
+                <li>大屏一</li>
+              </ul>
             </li>
             <li>
-              <router-link to="/fly">
-                机场一
-              </router-link>
+             <div  @click = "isShow(2)">
+               <i>倩</i>
+               交通
+               <i>倩</i>
+             </div>
+              <ul class="child-nav" v-show="three">
+                <li>大屏一</li>
+                <li>大屏一</li>
+              </ul>
             </li>
             <li>
-              <router-link to="/fly2">
-                机场二
-              </router-link>
+             <div  @click = "isShow(3)">
+               <i>倩</i>
+               宾馆
+               <i>倩</i>
+             </div>
+              <ul class="child-nav" v-show="four">
+                <li>大屏一</li>
+              </ul>
             </li>
             <li>
-              <router-link to="/server">
-                服务
-              </router-link>
+              <div  @click = "isShow(4)">
+                <i>倩</i>
+                餐饮
+                <i>倩</i>
+              </div>
+              <ul class="child-nav" v-show="five">
+                <li>大屏一</li>
+              </ul>
             </li>
-            <li>
-              <router-link to="/three">
-                三坊
-              </router-link>
-            </li>
-            <li>
-              <router-link to="/gu">
-                鼓楼
-              </router-link>
-            </li>
-            <li>
-              <router-link to="/jian">
-                监管
-              </router-link>
-            </li>
-            <li>
-              <router-link to="/guide1">
-                路牌
-              </router-link>
-            </li>
-          </ul>
+        </ul>
+      </div>
+      <div class="nav-header-right">
+        <Air></Air>
       </div>
     </div>
-    <router-view/>
+    <div class="my-view">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
+  import Time from "./components/Base/Time/Time.vue";
+  import Air from "./components/Base/Air/Air.vue";
 export default {
   name: 'App',
   data() {
     return {
-      isShow: false,
+        one: false,
+        two: false,
+        three: false,
+        four: false,
+        five: false
     }
   },
   methods: {
-    clickChange() {
-        this.isShow = !this.isShow;
-    }
+      isShow(index) {
+        const isShow = ['one', 'two', 'three', 'four', 'five'];
+        index = parseInt(index);
+        for(let i = 0; i < isShow.length; i++) {
+          if(i===index) {
+            this[isShow[index]] = !this[isShow[index]];
+          } else {
+            this[isShow[i]] = false;
+          }
+        }
+      }
+  },
+  components: {
+    Time,
+    Air
   }
 }
 </script>
@@ -126,103 +147,67 @@ export default {
     height: 100%;
     overflow: hidden;
   }
-  .my-nav {
-    position: absolute;
-    width: 60px;
+  .nav-header {
+    height: 12%;
+    background: url("../static/images/NavHeader/nav_header.jpg") no-repeat;
+    background-size: 100% 100%;
+    border-bottom: 1px solid #16A2BF;
+    display: flex;
+  }
+  .nav-header-left, .nav-header-center, .nav-header-right {
+    flex: 1;
     height: 100%;
-    z-index: 99;
-    .my-nav-left {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 60px;
-      height: 60px;
-      .my-nav-left-bg {
-        width: 100%;
-        height: 100%;
-        background: url("../static/images/ico-navtrigger.png") no-repeat;
-        background-size: 100% 100%;
-      }
-      background: rgba(192,192,192,.5);
-
-      &.my-rotate {
-        transition: all .3s;
-        transform: rotate(90deg);
-      }
-      &.my-rotate-off {
-        transition: all .3s;
-        transform: rotate(0deg);
-      }
+  }
+  .nav-header-left {
+    display: flex;
+    align-items: center;
+    margin-top: 1.4%;
+  }
+  .nav-header-center {
+    /*background: rgba(192,192,192,.2);*/
+    h1 {
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+      padding-top: 3px;
     }
-    .my-nav-right {
-      width: 60px;
-      margin-top: 61px;
-
-      .my-nav-right-bg {
-        position: absolute;
-        width: 100%;
-        height: 400px;
-        /*color: #007aff;*/
-        /*background: rgba(0,122,255,1);*/
-      }
-      .menu {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        &.click-menu {
-          li {
-            transition: all .5s;
-            &:nth-child(1){
-              transition-delay:0.1s;
-            }
-            &:nth-child(2){
-              transition-delay:0.2s;
-            }
-            &:nth-child(3){
-              transition-delay:0.3s;
-            }
-            &:nth-child(4){
-              transition-delay:0.4s;
-            }
-            &:nth-child(5){
-              transition-delay:0.5s;
-            }
-            &:nth-child(6){
-              transition-delay:0.6s;
-            }
-            &:nth-child(7){
-              transition-delay:0.7s;
-            }
-            &:nth-child(8){
-              transition-delay:0.8s;
-            }
-            &:nth-child(9){
-              transition-delay:0.9s;
-            }
-            transform: translate(0, 0);
-          }
-
+    .nav-header-center-nav {
+      display: flex;
+      padding-top: 4px;
+      justify-content: space-around;
+      li {
+        list-style: none;
+        font-size: 13px;
+        color: #fff;
+        background: url("../static/images/NavHeader/nav_bg.jpg") no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        i {
+          font-size: 13px;
+          color: transparent;
         }
-
-        li {
-          list-style: none;
-          padding: 10px  0;
-          transform: translate(-200px,0);
-          a {
-              text-decoration: none;
-              color: #fff;
-              padding: 0 10px;
-              font-size: 14px;
-            &.router-link-active {
-              color: #007aff;
-            }
+        ul.child-nav {
+          position: absolute;
+          width: 100%;
+          top: 20px;
+          li {
+            background: none;
+            line-height: 25px;
+            text-align: center;
           }
         }
       }
     }
   }
+  .nav-header-right {
+    display: flex;
+    align-items: center;
+    margin-top: 1.4%;
+  }
 
+  .my-view  {
+    height: 88%;
+  }
 
   /*双伪元素庆祝浮动,可用flex布局代替浮动*/
   .clearfix:before, .clearfix:after {

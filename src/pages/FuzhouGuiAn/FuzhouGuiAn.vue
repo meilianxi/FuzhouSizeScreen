@@ -16,6 +16,9 @@
       <!--人文景观-->
       <!--测试轮播-->
       <div class="main">
+        <!--loading动画-->
+        <Loading class="my-loading" v-if="loading"></Loading>
+
         <swiper :options="swiperOption">
           <!-- slides -->
           <swiper-slide>
@@ -52,6 +55,7 @@
   import LittleTime from "../../components/LittleTime/LittleTime.vue";
   import Humanity from "../../components/Humanity/Humanity.vue";
   import Humanity2 from "../../components/Humanity/Humanity2.vue";
+  import Loading from "../../components/Loading/Loading.vue";
 
   /*获取数据*/
   import {getGuiAn} from "../../api";
@@ -76,7 +80,9 @@
         /*人文景观数据*/
         humanity: [],
         nature: [],
-        imgArr: []
+        imgArr: [],
+        /*loading动画*/
+        loading: true
       }
     },
     props: [''],
@@ -98,7 +104,9 @@
 
       async getData() {
         let humanity = await getGuiAn();
-        console.log(humanity);
+        if(humanity) {
+          this.loading = false;
+        }
         /*临时存储*/
         let humanityTemp = [];
         /*自定义人数饱和标准,每个景点人数标准不一样,
@@ -132,7 +140,8 @@
     components: {
       LittleTime,
       Humanity,
-      Humanity2
+      Humanity2,
+      Loading
     },
     beforeDestroy() {
       clearInterval(this.timer);
@@ -221,6 +230,15 @@
     .main {
       height: 100%;
       border: 2px solid #13bad2;
+      position: relative;
+      .my-loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 99;
+        transform: translate(-50%, -50%);
+      }
+
     }
     .swiper-container {
       width: 100%;

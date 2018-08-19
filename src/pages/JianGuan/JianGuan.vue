@@ -1,6 +1,6 @@
 <template>
     <div class="supervise">
-      <Header title="福州旅游监管指挥调度大屏"></Header>
+      <!--<Header title="福州旅游监管指挥调度大屏"></Header>-->
       <div class="main">
             <div class="mian-top">
                   <div class="mian-top-left">
@@ -367,7 +367,7 @@
 
   @media screen and (min-width: 1600px) {
     .main {
-      height: 88%;
+      height: 100%;
       padding: 0 1%;
       box-sizing: border-box;
       background: url("../../../static/images/Base/bg.jpg") no-repeat;
@@ -478,7 +478,7 @@
 
   @media screen and (max-width: 1580px) {
     .main {
-      height: 88%;
+      height: 100%;
       padding: 0 1%;
       box-sizing: border-box;
       background: url("../../../static/images/Base/bg.jpg") no-repeat;
