@@ -154,7 +154,7 @@
       Hot,
       Map,
       Ruan1,
-      Zui
+      Zui,
     },
     beforeDestroy() {
       /*记得清页面定时器*/

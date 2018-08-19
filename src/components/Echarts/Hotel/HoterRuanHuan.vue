@@ -29,12 +29,12 @@
               fontSize: 12,
               color:'white'
             },
-            data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+            data:['世纪','TIME','希尔','半岛','其他']
           },
 
           series: [
             {
-              name:'访问来源',
+              name:'世纪',
               type:'pie',
               radius: ['50%', '70%'],
               avoidLabelOverlap: false,
@@ -64,11 +64,11 @@
                 }
               },
               data:[
-                {value:335, name:'直接访问'},
-                {value:310, name:'邮件营销'},
-                {value:234, name:'联盟广告'},
-                {value:135, name:'视频广告'},
-                {value:1548, name:'搜索引擎'}
+                {value:1335, name:'世纪'},
+                {value:310, name:'TIME'},
+                {value:234, name:'希尔'},
+                {value:135, name:'半岛'},
+                {value:248, name:'其他'}
               ],
 
             }
@@ -85,6 +85,7 @@
 <style lang="less" scoped>
   #RuanHuan {
     height: 100%;
+    transform: scale(.8);
   }
 
 </style>

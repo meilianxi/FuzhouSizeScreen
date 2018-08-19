@@ -9,11 +9,26 @@
               <Rander></Rander>
             </div>
           </div>
-          <div class="main-left-bottom"></div>
+          <div class="main-left-bottom">
+            <h4>近一周酒店房型预定情况</h4>
+            <Ruan2 class="ruan2"></Ruan2>
+            <Ruan21 class="ruan21"></Ruan21>
+            <div class="ruan2-title1">标准房</div>
+            <div class="ruan2-title2">已经预定 <span>300</span> 间</div>
+
+            <div class="ruan21-title1">大床房</div>
+            <div class="ruan21-title2">已经预定 <span>821</span> 间</div>
+          </div>
         </div>
         <div class="main-center">
           <div class="main-center-top"></div>
-          <div class="main-center-bottom"></div>
+          <div class="main-center-bottom">
+            <h4>近一周景区停车场使用情况分析</h4>
+            <div class="main-center-bottom-zhu">
+              <Shuang></Shuang>
+            </div>
+          </div>
+
         </div>
         <div class="main-right">
           <div class="main-right-top">
@@ -39,6 +54,7 @@
             </div>
           </div>
           <div class="main-right-bottom">
+            <h4>实时四星级以上酒店入住率</h4>
             <RuanHuan class="main-right-bottom-yuan"></RuanHuan>
           </div>
         </div>
@@ -52,6 +68,9 @@
     import Hot_hotel from "../../components/Hot/Hot_hotel.vue";
     /*右侧圆环*/
     import  RuanHuan from "../../components/Echarts/Hotel/HoterRuanHuan.vue";
+    import Shuang from "../../components/Echarts/Hotel/ShuangZhu.vue";
+    import Ruan2 from "../../components/Echarts/Hotel/Ruan2.vue";
+    import Ruan21 from "../../components/Echarts/Hotel/Ruan21.vue";
     export default {
         data() {
             return {
@@ -73,7 +92,10 @@
           Header,
           Rander,
           Hot_hotel,
-          RuanHuan
+          RuanHuan,
+          Shuang,
+          Ruan2,
+          Ruan21
         }
     }
 </script>
@@ -81,7 +103,6 @@
 <style lang="less" scoped>
   .hotel {
     height: 100%;
-
   }
   .header {
     height: 12%;
@@ -114,7 +135,54 @@
     }
     .main-left-bottom {
       flex: 1;
-      background: #999;
+      h4 {
+        width: 80%;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #16A2BF;
+        margin: 2% 10%;
+        color: #16A2BF;
+      }
+      border-top: 1px solid #16A2BF;
+      position: relative;
+      .ruan2 {
+        position: absolute;
+        top: 90px;
+        left: -40px;
+      }
+      .ruan21 {
+        position: absolute;
+        top: -30px;
+        left: -40px;
+      }
+      .ruan2-title1, .ruan2-title2, .ruan21-title1, .ruan21-title2 {
+        position: absolute;
+        color: #fff;
+        font-size: 12px;
+      }
+      .ruan2-title1 {
+        left: 90px;
+        top: 165px;
+      }
+      .ruan2-title2 {
+        left: 150px;
+        top: 110px;
+        span {
+          color: blue;
+        }
+      }
+      .ruan21-title1 {
+        left: 90px;
+        top: 277px;
+      }
+      .ruan21-title2 {
+        left: 150px;
+        top: 230px;
+        span {
+          color: blue;
+        }
+      }
     }
   }
   .main-center {
@@ -123,17 +191,34 @@
       flex: 1.5;
       background: url("../../../static/images/Hotel/hotel_map.jpg") no-repeat;
       background-size: 100% 100%;
+      border-bottom: 1px solid #16A2BF;
+      border-left: 1px solid #16A2BF;
     }
     .main-center-bottom {
       flex: 1;
-      background: #eee;
+      h4 {
+        width: 80%;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #16A2BF;
+        margin: 2% 10%;
+        color: #16A2BF;
+      }
+      border-left: 1px solid #16A2BF;
+      position: relative;
+      .main-center-bottom-zhu {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 18%;
+      }
     }
   }
   .main-right {
     flex: 2;
     .main-right-top {
       flex: 1.5;
-
       .main-right-top-t {
         height: 7%;
         padding-left: 10px;
@@ -146,10 +231,22 @@
       .main-right-top-b {
         height: 93%;
       }
+      border-left: 1px solid #16A2BF;
+      border-bottom: 1px solid #16A2BF;
     }
     .main-right-bottom {
       flex: 1;
       position: relative;
+      border-left: 1px solid #16A2BF;
+      h4 {
+        width: 80%;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #16A2BF;
+        margin: 2% 10%;
+        color: #16A2BF;
+      }
       .main-right-bottom-yuan  {
         width: 100%;
         height: 100%;

@@ -25,12 +25,12 @@
             textStyle: {
               fontWeight: 'normal',
               color: '#0580f2',
-              fontSize: '90'
+              fontSize: '40'
             }
           },
           color: ['rgba(176, 212, 251, 1)'],
           legend: {
-            show: true,
+            show: false,
             itemGap: 12,
             data: ['01', '02']
           },
@@ -87,9 +87,10 @@
 </script>
 
 <style lang="less" scoped>
-  #Park {
+  #Ruan2 {
+    width: 100%;
     height: 100%;
-    transform: scale(.85);
+    transform: scale(.4);
   }
 
 </style>
