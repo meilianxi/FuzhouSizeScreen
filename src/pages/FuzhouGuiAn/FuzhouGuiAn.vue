@@ -24,14 +24,14 @@
           <swiper-slide>
             <Humanity :imgArr = "imgArr" :spotData="humanity">
               <template slot="title">
-                主要游玩项目
+                贵安欢乐世界游玩项目
               </template>
             </Humanity>
           </swiper-slide>
           <swiper-slide>
             <Humanity2 :imgArr = "imgArr" :spotData="nature">
               <template slot="title">
-                园内游客分布
+                贵安欢乐世界园内游客分布
               </template>
             </Humanity2>
           </swiper-slide>
@@ -203,8 +203,8 @@
         }
         h1 {
           color: #fd0d1e;
-          margin-top: 10%;
-          font-size: 60px;
+          margin-top: 5%;
+          font-size: 55px;
           text-align: center;
         }
 

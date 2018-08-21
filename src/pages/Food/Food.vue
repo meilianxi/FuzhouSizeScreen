@@ -179,111 +179,7 @@
     height: 100%;
     background-size: 100% 100%;
   }
-  .fly-right {
-    width: 31.9%;
-    background: url("../../../static/images/Fly/fly-right.jpg") no-repeat;
-    display: flex;
-    flex-direction: column;
-    .fly-right-top {
-      flex: 3;
-      position: relative;
-      h3 {
-        width: 80%;
-        height: 30px;
-        text-align: center;
-        line-height: 30px;
-        border: 1px solid #16A2BF;
-        margin: 1% 10%;
-        color: #16A2BF;
-      }
-      .money {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 30%;
-        top: 10%;
-      }
-      .add  {
-        position: absolute;
-        width: 100%;
-        height: 80%;
-        p {
-          color: #fff;
-          margin-top: 5px;
-          margin-left: 10px;
-          &:nth-child(1) {
-            margin-top: 10px;
-          }
-          span {
-            color: #dea90f;
-            font-size: 30px;
-            &.my-add {
-              color: #2cc4c5;
-            }
-          }
-          i {
-            color: yellow;
-            font-size: 16px;
-          }
-        }
-      }
-      .done {
-        position: absolute;
-        left: 35%;
-        width: 30%;
-        height: 80%;
-        color: #fff;
-        .done-title {
-          margin-top: 10px;
-          text-align: center;
-        }
-        .done-bottom {
-          position: absolute;
-          width: 100%;
-          bottom: 22%;
-          p {
-            text-align: center;
-            font-size: 12px;
-            span {
-              display: inline-block;
-              width: 5px;
-              height: 5px;
-              border-radius: 50%;
-              &.done-bg1 {
-                background: #2bc3c4;
-              }
-              &.done-bg2 {
-                background: #ffc000;
-              }
-            }
-          }
-        }
-      }
 
-    }
-    .fly-right-center {
-      flex: 2;
-    }
-    .fly-right-bottom {
-      flex: 3;
-      position: relative;
-      h3 {
-        width: 80%;
-        height: 30px;
-        text-align: center;
-        line-height: 30px;
-        border: 1px solid #16A2BF;
-        margin: 1% 10%;
-        color: #16A2BF;
-      }
-      .zui {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-      }
-
-    }
-  }
   .fly-left {
     width: 68%;
     box-sizing: border-box;
@@ -370,6 +266,111 @@
         font-size: 16px;
       }
     }
+    .fly-right {
+      width: 31.9%;
+      background: url("../../../static/images/Fly/fly-right.jpg") no-repeat;
+      display: flex;
+      flex-direction: column;
+      .fly-right-top {
+        flex: 3;
+        position: relative;
+        h3 {
+          width: 80%;
+          height: 30px;
+          text-align: center;
+          line-height: 30px;
+          border: 1px solid #16A2BF;
+          margin: 1% 10%;
+          color: #16A2BF;
+        }
+        .money {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 30%;
+          top: 10%;
+        }
+        .add  {
+          position: absolute;
+          width: 100%;
+          height: 80%;
+          p {
+            color: #fff;
+            margin-top: 5px;
+            margin-left: 10px;
+            &:nth-child(1) {
+              margin-top: 10px;
+            }
+            span {
+              color: #dea90f;
+              font-size: 30px;
+              &.my-add {
+                color: #2cc4c5;
+              }
+            }
+            i {
+              color: yellow;
+              font-size: 16px;
+            }
+          }
+        }
+        .done {
+          position: absolute;
+          left: 35%;
+          width: 30%;
+          height: 80%;
+          color: #fff;
+          .done-title {
+            margin-top: 10px;
+            text-align: center;
+          }
+          .done-bottom {
+            position: absolute;
+            width: 100%;
+            bottom: 22%;
+            p {
+              text-align: center;
+              font-size: 12px;
+              span {
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                &.done-bg1 {
+                  background: #2bc3c4;
+                }
+                &.done-bg2 {
+                  background: #ffc000;
+                }
+              }
+            }
+          }
+        }
+
+      }
+      .fly-right-center {
+        flex: 2;
+      }
+      .fly-right-bottom {
+        flex: 3;
+        position: relative;
+        h3 {
+          width: 80%;
+          height: 30px;
+          text-align: center;
+          line-height: 30px;
+          border: 1px solid #16A2BF;
+          margin: 1% 10%;
+          color: #16A2BF;
+        }
+        .zui {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+        }
+
+      }
+    }
   }
   /*1366及以上*/
   @media screen and (min-width: 1367px) {
@@ -430,6 +431,116 @@
       b {
         color: yellow;
         font-size: 18px;
+      }
+    }
+    .fly-right {
+      width: 31.9%;
+      background: url("../../../static/images/Fly/fly-right.jpg") no-repeat;
+      display: flex;
+      flex-direction: column;
+      .fly-right-top {
+        flex: 3;
+        position: relative;
+        h3 {
+          width: 80%;
+          height: 30px;
+          text-align: center;
+          line-height: 30px;
+          border: 1px solid #16A2BF;
+          margin: 1% 10%;
+          color: #16A2BF;
+        }
+        .money {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 30%;
+          top: 10%;
+        }
+        .add  {
+          position: absolute;
+          width: 100%;
+          height: 80%;
+          left: 10%;
+          top: 20%;
+          p {
+            color: #fff;
+            margin-top: 2%;
+            margin-left: 10px;
+            font-size: 20px;
+            &:nth-child(1) {
+              margin-top: 10px;
+            }
+            span {
+              color: #dea90f;
+              font-size: 35px;
+              &.my-add {
+                color: #2cc4c5;
+              }
+            }
+            i {
+              color: yellow;
+              font-size: 16px;
+            }
+          }
+        }
+        .done {
+          position: absolute;
+          left: 35%;
+          width: 30%;
+          height: 80%;
+          color: #fff;
+          .done-title {
+            margin-top: 20%;
+            font-size: 18px;
+            text-align: center;
+          }
+          .done-bottom {
+            position: absolute;
+            width: 100%;
+            bottom: 22%;
+            p {
+              text-align: center;
+              font-size: 16px;
+              span {
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                &.done-bg1 {
+                  background: #2bc3c4;
+                }
+                &.done-bg2 {
+                  background: #ffc000;
+                }
+              }
+            }
+          }
+        }
+
+      }
+      .fly-right-center {
+        flex: 2;
+      }
+      .fly-right-bottom {
+        flex: 3;
+        position: relative;
+        h3 {
+          width: 80%;
+          height: 30px;
+          text-align: center;
+          line-height: 30px;
+          border: 1px solid #16A2BF;
+          margin: 1% 10%;
+          color: #16A2BF;
+        }
+        .zui {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 10%;
+        }
+
       }
     }
   }

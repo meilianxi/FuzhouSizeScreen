@@ -161,52 +161,156 @@ export default {
     flex: 1;
     height: 100%;
   }
-  .nav-header-left {
-    display: flex;
-    align-items: center;
-    margin-top: 1.4%;
-  }
-  .nav-header-center {
-    h1 {
-      color: #fff;
-      font-size: 20px;
-      text-align: center;
-      padding-top: 3px;
-    }
-    .nav-header-center-nav {
+
+  @media screen and (max-width: 1280px) {
+    .nav-header-left {
       display: flex;
-      padding-top: 4px;
-      justify-content: space-around;
-      li {
-        list-style: none;
-        font-size: 13px;
+      align-items: center;
+      margin-top: 1.4%;
+    }
+    .nav-header-center {
+      h1 {
         color: #fff;
-        background: url("../static/images/NavHeader/nav_bg.jpg") no-repeat;
-        background-size: 100% 100%;
-        position: relative;
-        i {
+        font-size: 20px;
+        text-align: center;
+        padding-top: 3px;
+      }
+      .nav-header-center-nav {
+        display: flex;
+        padding-top: 4px;
+        justify-content: space-around;
+        li {
+          list-style: none;
           font-size: 13px;
-          color: transparent;
-        }
-        ul.child-nav {
-          position: absolute;
-          width: 100%;
-          top: 20px;
-          z-index: 9999;
-          li {
-           /* background: #000;*/
-            line-height: 25px;
-            text-align: center;
+          color: #fff;
+          background: url("../static/images/NavHeader/nav_bg.jpg") no-repeat;
+          background-size: 100% 100%;
+          position: relative;
+          i {
+            font-size: 13px;
+            color: transparent;
+          }
+          ul.child-nav {
+            position: absolute;
+            width: 100%;
+            top: 20px;
+            z-index: 9999;
+            li {
+              /* background: #000;*/
+              line-height: 25px;
+              text-align: center;
+            }
           }
         }
       }
     }
+    .nav-header-right {
+      display: flex;
+      align-items: center;
+      /* margin-top: 1.4%;*/
+      position: relative;
+    }
   }
-  .nav-header-right {
-    display: flex;
-    align-items: center;
-    margin-top: 1.4%;
+  @media screen and (min-width: 1281px) and (max-width: 1600px) {
+    .nav-header-left {
+      display: flex;
+      align-items: center;
+      margin-top: 1.4%;
+    }
+    .nav-header-center {
+      h1 {
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 3px;
+      }
+      .nav-header-center-nav {
+        display: flex;
+        padding-top: 2%;
+        justify-content: space-around;
+        li {
+          list-style: none;
+          font-size: 14px;
+          color: #fff;
+          background: url("../static/images/NavHeader/nav_bg.jpg") no-repeat;
+          background-size: 100% 100%;
+          position: relative;
+          i {
+            font-size: 14px;
+            color: transparent;
+          }
+          ul.child-nav {
+            position: absolute;
+            width: 100%;
+            top: 20px;
+            z-index: 9999;
+            li {
+              /* background: #000;*/
+              line-height: 25px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .nav-header-right {
+      display: flex;
+      align-items: center;
+      /* margin-top: 1.4%;*/
+      position: relative;
+    }
   }
+  @media screen and (min-width: 1601px) {
+    .nav-header-left {
+      display: flex;
+      align-items: center;
+      margin-top: 1.4%;
+    }
+    .nav-header-center {
+      h1 {
+        color: #fff;
+        font-size: 26px;
+        text-align: center;
+        padding-top: 3px;
+      }
+      .nav-header-center-nav {
+        display: flex;
+        padding-top: 2%;
+        justify-content: space-around;
+        li {
+          list-style: none;
+          font-size: 17px;
+          color: #fff;
+          background: url("../static/images/NavHeader/nav_bg.jpg") no-repeat;
+          background-size: 100% 100%;
+          position: relative;
+          i {
+            font-size: 17px;
+            color: transparent;
+          }
+          ul.child-nav {
+            position: absolute;
+            width: 100%;
+            top: 20px;
+            z-index: 9999;
+            li {
+              /* background: #000;*/
+              line-height: 25px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .nav-header-right {
+      display: flex;
+      align-items: center;
+      /* margin-top: 1.4%;*/
+      position: relative;
+    }
+  }
+
+
 
   .my-view  {
     height: 88%;

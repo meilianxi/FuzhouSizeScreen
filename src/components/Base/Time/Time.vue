@@ -45,12 +45,24 @@
 
 <style lang="less" scoped>
 
-  span {
-    display: inline-block;
-    margin-left: 30px;
-    height: 30px;
-    line-height: 30px;
-    color: #fff;
-    font-size: 14px;
+  @media screen and (max-width: 1600px) {
+    span {
+      display: inline-block;
+      margin-left: 30px;
+      height: 30px;
+      line-height: 30px;
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+  @media screen and (min-width: 1601px) {
+    span {
+      display: inline-block;
+      margin-left: 30px;
+      height: 30px;
+      line-height: 30px;
+      color: #fff;
+      font-size: 16px;
+    }
   }
 </style>

@@ -253,6 +253,16 @@
         }
         .spots-right {
           flex: 1;
+          position: relative;
+          .spots-right-bg {
+            position: absolute;
+            left: 5%;
+            bottom: 0;
+            height: 50%;
+            width: 90%;
+            background: url("../../../static/images/FuzhouGuiAn/sport.png") no-repeat;
+            background-size: 100% 100%;
+          }
         }
       }
 

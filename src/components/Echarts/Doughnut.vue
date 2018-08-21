@@ -1,7 +1,7 @@
 <template>
   <div class="doughnut">
     <div class="doughnut-top">
-      <h3>西湖风景名胜区各业态游客占比</h3>
+      <h3>三坊七巷风景名胜区各业态游客占比</h3>
     </div>
 
     <div class="doughnut-bot">

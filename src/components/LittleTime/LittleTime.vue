@@ -69,12 +69,12 @@
       background: #1c4885;
       .week,.time, .day {
         text-align: center;
-        font-size: 40px;
+        font-size: 35px;
         color: #fff;
-        margin-bottom: 4%;
+        margin-bottom: 1%;
       }
       .week {
-        padding-top: 10%;
+        padding-top: 9%;
       }
     }
   }

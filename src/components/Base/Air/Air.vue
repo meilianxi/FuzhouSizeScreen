@@ -36,21 +36,77 @@
 </script>
 
 <style scoped>
-  span {
-    font-size: 14px;
-    margin-right: 8px;
-    color: #fff;
+  @media screen and (max-width: 1024px) {
+    .myAir {
+      position: absolute;
+      top: 46%;
+    }
+    span {
+      font-size: 14px;
+      margin-right: 8px;
+      color: #fff;
+    }
+    .last {
+      display: inline-block;
+      text-align: center;
+      width: 80px;
+      height: 35px;
+      line-height: 35px;
+      border: 1px solid green;
+      border-radius: 5px;
+      color: green;
+      margin-left: 5px;
+      font-size: 20px;
+    }
   }
-  .last {
-    display: inline-block;
-    text-align: center;
-    width: 80px;
-    height: 40px;
-    line-height: 40px;
-    border: 1px solid green;
-    border-radius: 5px;
-    color: green;
-    margin-left: 5px;
-    font-size: 20px;
+
+  @media screen and (min-width: 1025px) and (max-width: 1600px) {
+    .myAir {
+      position: absolute;
+      right: 5%;
+      top: 46%;
+    }
+    span {
+      font-size: 14px;
+      margin-right: 8px;
+      color: #fff;
+    }
+    .last {
+      display: inline-block;
+      text-align: center;
+      width: 80px;
+      height: 35px;
+      line-height: 35px;
+      border: 1px solid green;
+      border-radius: 5px;
+      color: green;
+      margin-left: 5px;
+      font-size: 20px;
+    }
   }
+  @media screen and (min-width: 1601px) {
+    .myAir {
+      position: absolute;
+      right: 5%;
+      top: 52%;
+    }
+    span {
+      font-size: 16px;
+      margin-right: 12px;
+      color: #fff;
+    }
+    .last {
+      display: inline-block;
+      text-align: center;
+      width: 80px;
+      height: 35px;
+      line-height: 35px;
+      border: 1px solid green;
+      border-radius: 5px;
+      color: green;
+      margin-left: 5px;
+      font-size: 20px;
+    }
+  }
+
 </style>

@@ -395,7 +395,7 @@
               margin-bottom: 25px;
             }
             p {
-              line-height: 36px;
+              line-height: 30px;
               border-top: 1px solid #13bad2;
               padding-left: 15px;
             }

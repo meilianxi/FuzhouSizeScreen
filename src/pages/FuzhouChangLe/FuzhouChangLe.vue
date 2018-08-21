@@ -217,8 +217,8 @@
         }
         h1 {
           color: #fd0d1e;
-          margin-top: 10%;
-          font-size: 60px;
+          margin-top: 5%;
+          font-size: 55px;
           text-align: center;
         }
 
